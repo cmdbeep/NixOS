@@ -5,7 +5,7 @@
     ../../modules/home/configs/ghostty.nix
     ../../modules/home/configs/hyprland.nix
     ../../modules/home/configs/kitty.nix
-    # ../../modules/home/configs/neovim.nix
+    ../../modules/home/configs/neovim.nix
     ../../modules/home/configs/opencode.nix
     ../../modules/home/configs/starship.nix
     ../../modules/home/configs/tmux.nix

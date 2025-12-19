@@ -11,7 +11,10 @@
     nixfmt
     shellcheck
     shfmt
+    stylua
     taplo
+    tree-sitter
+    prettier
 
     # other tools
     radicle-tui

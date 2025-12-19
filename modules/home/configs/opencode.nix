@@ -4,8 +4,7 @@
     enable = true;
     settings = {
       theme = "dracula";
-      provider = {
-        ollama = {
+      provider.ollama = {
           npm = "@ai-sdk/openai-compatible";
           name = "Ollama (local)";
           options = {
@@ -16,7 +15,7 @@
               name = "Llama 3.2";
             };
           };
-        };
+        
       };
     };
   };
