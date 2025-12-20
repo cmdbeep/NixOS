@@ -14,6 +14,27 @@
       "react-typescript-snippets"
     ];
 
+    userKeymaps = [
+      {
+        bindings = {
+          "ctrl-shift-o" = [
+            "agent::NewExternalAgentThread"
+            {
+              agent = {
+                custom = {
+                  name = "OpenCode";
+                  command = {
+                    command = "opencode";
+                    args = [ "acp" ];
+                  };
+                };
+              };
+            }
+          ];
+        };
+      }
+    ];
+
     userSettings = {
       theme = {
         mode = "dark";
