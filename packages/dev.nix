@@ -1,26 +1,40 @@
-{ pkgs, ... }:
+{ pkgs, unstable, ... }:
 {
   environment.systemPackages = with pkgs; [
-    # language servers
+    basedpyright
     bash-language-server
-    intelli-shell
     lua-language-server
     marksman
     markdown-oxide
     nixd
+    nodePackages.typescript-language-server
+    nodePackages.vscode-langservers-extracted
+    package-version-server
+
     nixfmt
+    nodePackages.prettier
+    ruff
     shellcheck
     shfmt
     stylua
+
+    nodePackages.eslint
+    nodePackages.typescript
     taplo
     tree-sitter
-    prettier
 
-    # other tools
+    codespell
+
+    nodejs_24
+    nodePackages.pnpm
+    uv
+
+    intelli-shell
+
+    godot
     radicle-tui
     superfile
-    godot
-    zed-editor
+    unstable.zed-editor
   ];
 
   programs.git.enable = true;

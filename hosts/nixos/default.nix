@@ -11,6 +11,7 @@
     ../../modules/nixos/locale.nix
     ../../modules/nixos/networking.nix
     ../../modules/nixos/nix.nix
+    ../../modules/nixos/secrets.nix
     ../../modules/nixos/security.nix
     ../../modules/nixos/services.nix
     # ../../modules/nixos/virtualisation.nix

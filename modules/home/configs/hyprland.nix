@@ -2,12 +2,11 @@
 let
   dracula = import ../themes/dracula.nix;
   rofi-collection = self.packages.${pkgs.system}.rofi-collection;
-  rofi-launcher = self.packages.${pkgs.system}.rofi-launcher;
 in
 {
-  home.packages = [
-    rofi-launcher
-  ];
+  # home.packages = [
+  #   rofi-launcher
+  # ];
 
   home.file.".config/rofi" = {
     source = "${rofi-collection}/files";

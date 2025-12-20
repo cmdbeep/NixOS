@@ -2,11 +2,10 @@
 {
   services.ollama = {
     enable = true;
-    loadModels = [ ];
+    loadModels = [
+      "llama3.2:3b"
+      "codellama:7b"
+    ];
     package = pkgs.ollama-rocm;
   };
-
-  environment.systemPackages = with pkgs; [
-    oterm
-  ];
 }

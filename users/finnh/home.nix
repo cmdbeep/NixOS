@@ -5,7 +5,7 @@
     ../../modules/home/configs/ghostty.nix
     ../../modules/home/configs/hyprland.nix
     ../../modules/home/configs/kitty.nix
-    ../../modules/home/configs/neovim.nix
+    # ../../modules/home/configs/neovim.nix
     ../../modules/home/configs/opencode.nix
     ../../modules/home/configs/starship.nix
     ../../modules/home/configs/tmux.nix
@@ -46,6 +46,24 @@
     };
   };
 
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "github.com" = {
+        identityFile = "/home/finnh/.ssh/github";
+        identitiesOnly = true;
+      };
+    };
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "cmdbeep";
+    userEmail = "hasse.finn@icloud.com";
+    extraConfig = {
+      url."git@github.com:".insteadOf = "https://github.com/";
+    };
+  };
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
 }

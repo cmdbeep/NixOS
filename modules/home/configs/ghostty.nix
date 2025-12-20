@@ -35,7 +35,7 @@
     settings = {
       theme = "dracula";
       alpha-blending = "native";
-      background-opacity = 0.75;
+      background-opacity = 0.95;
       background-blur = true;
       background-blur-radius = 75;
       font-family = "Maple Mono NF";

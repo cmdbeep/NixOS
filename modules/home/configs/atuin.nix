@@ -26,8 +26,8 @@ in
     };
 
     themes = {
-      "dracula" = {
-        theme.name = "dracula";
+      dracula = {
+        # theme.name = "dracula";
         colors = {
           background = "#${dracula.background}";
           foreground = "#${dracula.foreground}";

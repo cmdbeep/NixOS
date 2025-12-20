@@ -38,7 +38,7 @@ in
       sync_to_monitor = true;
 
       confirm_os_window_close = 0;
-      background_opacity = "0.75";
+      background_opacity = "0.95";
       enable_audio_bell = false;
       cursor_blink_interval = 0;
     };
