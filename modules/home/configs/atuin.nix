@@ -15,7 +15,7 @@ in
       network_connect_timeout = 60;
       network_timeout = 60;
       search_mode = "fuzzy";
-      style = "auto";
+      style = "full";
       sync_address = "localhost:8888";
       sync_frequency = "30m";
       theme = {
@@ -23,26 +23,24 @@ in
       };
       workspaces = true;
       workspaces_auto = true;
+
+      enter_accept = true;
+      keymap_mode = "auto";
     };
 
     themes = {
       dracula = {
-        # theme.name = "dracula";
+        theme.name = "dracula";
         colors = {
-          background = "#${dracula.background}";
-          foreground = "#${dracula.foreground}";
-          border = "#${dracula.purple}";
-          selected_bg = "#${dracula.currentLine}";
-          selected_fg = "#${dracula.foreground}";
-          prompt = "#${dracula.pink}";
-          info = "#${dracula.cyan}";
-          error = "#${dracula.red}";
-          hint = "#${dracula.comment}";
-          command = "#${dracula.green}";
-          arg = "#${dracula.cyan}";
-          flag = "#${dracula.orange}";
-          time = "#${dracula.yellow}";
-          duration = "#${dracula.purple}";
+          AlertInfo = "#${dracula.cyan}";
+          AlertWarn = "#${dracula.orange}";
+          AlertError = "#${dracula.red}";
+
+          Annotation = "#${dracula.comment}";
+          Base = "#${dracula.foreground}";
+          Guidance = "#${dracula.purple}";
+          Important = "#${dracula.pink}";
+          Title = "#${dracula.green}";
         };
       };
     };
