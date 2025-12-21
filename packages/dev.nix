@@ -32,7 +32,6 @@
     intelli-shell
 
     godot
-    radicle-tui
     superfile
     unstable.zed-editor
   ];

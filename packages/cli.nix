@@ -1,7 +1,8 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
-    atuin
+    # atuin
+    chess-tui
     eza
     fd
     fzf
@@ -14,7 +15,6 @@
   ];
 
   programs.bat.enable = true;
-  # programs.neovim.enable = true;
   programs.starship.enable = true;
   programs.tmux.enable = true;
   programs.zoxide.enable = true;
