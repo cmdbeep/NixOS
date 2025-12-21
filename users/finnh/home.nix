@@ -4,12 +4,16 @@
     ../../modules/home/configs/atuin.nix
     ../../modules/home/configs/ghostty.nix
     ../../modules/home/configs/hyprland.nix
+    ../../modules/home/configs/intelli-shell.nix
     ../../modules/home/configs/kitty.nix
     # ../../modules/home/configs/neovim.nix
+    ../../modules/home/configs/nushell.nix
     ../../modules/home/configs/opencode.nix
+    ../../modules/home/configs/radicle.nix
     ../../modules/home/configs/starship.nix
     ../../modules/home/configs/tmux.nix
     ../../modules/home/configs/zed-editor.nix
+    ../../modules/home/configs/zoxide.nix
     ../../modules/home/configs/zsh.nix
     ../../modules/home/themes/theming.nix
   ];
