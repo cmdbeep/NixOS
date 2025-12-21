@@ -6,6 +6,7 @@
     settings = {
       theme = "dracula";
       model = "ollama/codellama:13b";
+      share = "disabled";
 
       agent = {
         architect = {
