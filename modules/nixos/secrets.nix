@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 {
   age.identityPaths = [
     "/home/finnh/.ssh/id_ed25519"
