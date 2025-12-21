@@ -1,12 +1,14 @@
-{ pkgs, self, ... }:
+{
+  pkgs,
+  self,
+  wallpaper,
+  ...
+}:
 let
   dracula = import ../themes/dracula.nix;
   rofi-collection = self.packages.${pkgs.system}.rofi-collection;
 in
 {
-  # home.packages = [
-  #   rofi-launcher
-  # ];
 
   home.file.".config/rofi" = {
     source = "${rofi-collection}/files";
@@ -21,6 +23,12 @@ in
     '';
   };
 
+  xdg.configFile."hypr/hyprpaper.conf".text = ''
+    preload = ${wallpaper}
+    wallpaper = ,${wallpaper}
+    splash = false
+  '';
+
   wayland.windowManager.hyprland = {
     enable = true;
     plugins = [ ];
@@ -29,6 +37,7 @@ in
       exec-once = [
         "${pkgs.kdePackages.polkit-kde-agent-1}/libexec/polkit-kde-authentication-agent-1"
         "hyprctl setcursor phinger-cursors-dark 20"
+        "hyprpaper"
       ];
       general = {
         monitor = "DP-1, 3440x1440@120, 0x0, 1";

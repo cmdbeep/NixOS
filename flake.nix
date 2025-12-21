@@ -22,7 +22,6 @@
       rofiTheme = "style-1";
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-      # Add unstable packages
       pkgs-unstable = import unstable {
         inherit system;
         config.allowUnfree = true;
@@ -48,6 +47,7 @@
                 extraSpecialArgs = {
                   inherit self;
                   unstable = pkgs-unstable;
+                  wallpaper = self.packages.${system}.wallpaper;
                 };
               };
             }
@@ -61,12 +61,10 @@
           rev = "adfcc0770fa10daec5d87e3fb4ca6acd1d309491";
           sha256 = "yMKpwxdwvp7ryz2XXunbjC/5ud9HHEDzyYRhM540958=";
         };
-        # wallpaper = pkgs.fetchFromGitHub {
-        #   owner = "";
-        #   repo = "";
-        #   rev = "";
-        #   sha256 = "";
-        # };
+        wallpaper = pkgs.fetchurl {
+          url = "https://w.wallhaven.cc/full/7j/wallhaven-7jgyre.jpg";
+          sha256 = "1mk3j3qcpwxzima4xrrfcx14dg53pdaadj3bfqfsc6mq4jdix6yn";
+        };
         rofi-launcher = pkgs.writeShellScriptBin "rofi-launcher" ''
           theme='${rofiTheme}'
           ${pkgs.rofi}/bin/rofi \

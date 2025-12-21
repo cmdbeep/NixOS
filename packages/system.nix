@@ -6,9 +6,9 @@
     brightnessctl
     btop-rocm
     fastfetch
+    hyprpaper
     kdePackages.polkit-kde-agent-1
     rofi
-    swaylock
 
     self.packages.${pkgs.system}.rofi-launcher
     self.packages.${pkgs.system}.rofi-powermenu
