@@ -17,4 +17,9 @@
     enable32Bit = true;
     # extraPackages = with pkgs; [ rocmPackages.clr.icd ];
   };
+
+  # zramSwap = {
+  #   enable = true;
+  #   algorithm = "lz4";
+  # };
 }
