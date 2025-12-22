@@ -1,9 +1,12 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.ghostty = {
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
+    systemd = {
+      enable = true;
+    };
     themes = {
       dracula = {
         palette = [
@@ -33,6 +36,7 @@
       };
     };
     settings = {
+      command = "${pkgs.tmux}/bin/tmux new-session -A -s main";
       theme = "dracula";
       alpha-blending = "native";
       background-opacity = 0.95;
@@ -40,6 +44,7 @@
       background-blur-radius = 75;
       font-family = "Maple Mono NF";
       font-size = 15;
+      window-padding-x = 10;
       keybind = [ ];
     };
   };

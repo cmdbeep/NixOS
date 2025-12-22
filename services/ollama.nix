@@ -3,10 +3,9 @@
   services.ollama = {
     enable = true;
     loadModels = [
-      "llama3.2:3b"
-      "codellama:7b"
-      "codellama:13b"
+      "qwen2.5-coder:7b"
+      "qwen2.5-coder:14b"
     ];
-    package = pkgs.ollama-rocm;
+    package = pkgs.ollama-vulkan;
   };
 }

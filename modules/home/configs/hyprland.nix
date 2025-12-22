@@ -104,7 +104,8 @@ in
       };
 
       bind = [
-        "$mod, T, exec, kitty"
+        "$mod, T, exec, ghostty"
+        "$mod SHIFT, T, exec, kitty"
         "$mod, B, exec, firefox"
         "$mod, E, exec, thunar"
         "$mod, D, exec, rofi-launcher"

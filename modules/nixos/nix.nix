@@ -10,6 +10,11 @@
     options = "--delete-older-than 30d";
   };
 
+  nix.optimise = {
+    automatic = true;
+    dates = [ "weekly" ];
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [

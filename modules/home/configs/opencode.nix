@@ -5,13 +5,13 @@
     package = unstable.opencode;
     settings = {
       theme = "dracula";
-      model = "ollama/codellama:13b";
+      model = "ollama/qwen2.5-coder:7b";
       share = "disabled";
 
       agent = {
         architect = {
           mode = "primary";
-          model = "ollama/codellama:13b";
+          model = "ollama/qwen2.5-coder:7b";
           prompt = ''
             You are a software architect. When given a task:
             1. Break it down into clear, manageable steps
@@ -30,7 +30,7 @@
 
         build = {
           mode = "primary";
-          model = "ollama/codellama:13b";
+          model = "ollama/qwen2.5-coder:7b";
           prompt = ''
             You are an expert developer. Your role:
             - Implement code following the architect's plan
@@ -52,7 +52,7 @@
         reviewer = {
           description = "Reviews code for quality, security, and best practices";
           mode = "subagent";
-          model = "ollama/codellama:13b";
+          model = "ollama/qwen2.5-coder:7b";
           prompt = ''
             You are a senior code reviewer. Review code for:
 
@@ -93,7 +93,7 @@
         tester = {
           description = "Generates tests and validates code";
           mode = "subagent";
-          model = "ollama/codellama:13b";
+          model = "ollama/qwen2.5-coder:7b";
           prompt = ''
             You are a test engineer. Your responsibilities:
             - Write comprehensive unit tests
@@ -115,7 +115,7 @@
         debugger = {
           description = "Diagnoses and fixes issues in code";
           mode = "subagent";
-          model = "ollama/codellama:13b";
+          model = "ollama/qwen2.5-coder:7b";
           prompt = ''
             You are a debugging expert. When investigating issues:
             1. Analyze error messages and stack traces carefully
@@ -141,11 +141,8 @@
           baseURL = "http://localhost:11434/v1";
         };
         models = {
-          "codellama:7b" = {
-            name = "codellama:7b";
-          };
-          "codellama:13b" = {
-            name = "codellama:13b";
+          "qwen2.5-coder:7b" = {
+            name = "qwen2.5-coder:7b";
           };
         };
       };

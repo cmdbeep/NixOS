@@ -12,4 +12,5 @@
     ];
     shell = pkgs.zsh;
   };
+  home-manager.backupFileExtension = "backup";
 }
