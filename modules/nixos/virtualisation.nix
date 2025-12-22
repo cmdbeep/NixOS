@@ -4,7 +4,7 @@
     docker-compose
     docker-compose-language-service
     lazydocker
-    win-virtio
+    virtio-win
   ];
 
   virtualisation.docker.enable = true;
@@ -13,15 +13,6 @@
     enable = true;
     qemu = {
       package = pkgs.qemu_kvm;
-      ovmf = {
-        enable = true;
-        packages = [
-          (pkgs.OVMF.override {
-            secureBoot = true;
-            tpmSupport = true;
-          }).fd
-        ];
-      };
       runAsRoot = false;
       swtpm.enable = true;
     };

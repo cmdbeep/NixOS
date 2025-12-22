@@ -11,7 +11,9 @@
     ../../modules/home/configs/opencode.nix
     ../../modules/home/configs/radicle.nix
     ../../modules/home/configs/starship.nix
+    ../../modules/home/configs/superfile.nix
     ../../modules/home/configs/tmux.nix
+    ../../modules/home/configs/vscodium.nix
     ../../modules/home/configs/zed-editor.nix
     ../../modules/home/configs/zoxide.nix
     ../../modules/home/configs/zsh.nix
@@ -60,14 +62,6 @@
     };
   };
 
-  programs.git = {
-    enable = true;
-    userName = "cmdbeep";
-    userEmail = "hasse.finn@icloud.com";
-    extraConfig = {
-      url."git@github.com:".insteadOf = "https://github.com/";
-    };
-  };
   programs.home-manager.enable = true;
   systemd.user.startServices = "sd-switch";
 }

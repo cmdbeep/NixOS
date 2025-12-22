@@ -1,17 +1,17 @@
 { ... }:
 {
 
-  # networking.bridges.br0.interfaces = [ "enp3s0" ];
-
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ ];
+    allowedTCPPorts = [
+      80
+      443
+      8776 # Radicle seed node
+      11434 # Ollama
+    ];
     allowedUDPPorts = [ ];
   };
 
-  # networking.interfaces.br0.useDHCP = true;
-
   networking.networkmanager.enable = true;
-
   networking.hostName = "nixos";
 }

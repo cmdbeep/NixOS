@@ -14,7 +14,7 @@
     ../../modules/nixos/secrets.nix
     ../../modules/nixos/security.nix
     ../../modules/nixos/services.nix
-    # ../../modules/nixos/virtualisation.nix
+    ../../modules/nixos/virtualisation.nix
 
     # Package groups
     ../../packages/cli.nix
@@ -25,7 +25,7 @@
     ../../packages/system.nix
 
     # Services
-    # ../../services/ollama.nix
+    ../../services/ollama.nix
     # ../../services/radicle.nix
 
     # Users
@@ -33,6 +33,7 @@
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
   networking.hostName = "nixos";
   system.stateVersion = "25.11";
