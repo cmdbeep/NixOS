@@ -65,6 +65,12 @@
       tab_bar = {
         show = false;
       };
+      collaboration_panel = {
+        button = false;
+      };
+      notification_panel = {
+        button = false;
+      };
 
       lsp = {
         basedpyright = {
